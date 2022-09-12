@@ -1,0 +1,200 @@
+#include <stdio.h> // Funções de entrada e saída
+#include <stdlib.h> // Função padrão
+#include <math.h> // Funções matemáticas
+#include <conio.h> // Função para a entrada e saída de programas que usam o console DOS
+#include <locale.h> // Habilita o uso de acentuação em palavras
+#include <string.h> // Funções para manipular strings
+#include <time.h> // Trata de tipos de data e hora.
+#include <ctype.h> // Contém funções e macros para manipulação de caracteres.
+
+// Adicionar novas bibliotecas acima de acordo com necessidade 
+
+/*
+    // Espaço destinado a transcrição do enunciado para não ficar olhando toda hora a lista
+
+ 
+ 
+
+*/
+
+int main() // Função obrigatória
+   {
+	/* Declaração de constantes ou variáveis */
+	
+	/* Fim */
+
+	/* Entrada de dados */
+	
+	setlocale(LC_ALL,"pt-BR");
+	/*
+	Leitura de uma string
+	1º forma:
+	scanf("%tamanho[^\n]",string); Por padrão o scanf ler até encontrar o primeiro espaço e 
+				       não se importa com o tamnaho da string. Solução:
+	[^\n] - Faz com que o scanf leia tudo que foi digitado até que a tecla enter seja pressionada.
+	tamanho - Define a quantidade máxima de caracteres que eu quero ler do teclado.
+
+	Resolvendo o problema do scanf não permitindo o usuário fornecer um dado
+	
+	scanf(" %tamanho[^\n]",string); O espaço antes do % dentro do scanf consome todos os espaços em branco (' '), tabs ('\x9'),
+					avanco de linha ('\n') e retorno de cursor ('\r') que estiverem em sequência.
+	
+	2º forma:
+
+	gets(string); Função insegura (altamente recomendado que não utilize gets quando tiver programando)
+		      Não se importa com o tamanho da string
+	
+	3ª forma:
+
+	fgets(string, tamanho do vetor, stdin);
+
+	O fgets pega tudo que foi digitado até o caractere \n que representa o ENTER quando pressionado no teclado. Com isso, a penúltima posição
+	fica ocupada pelo \n e a última fica ocupada pelo \0 que indica fim de string.
+
+	Então se eu quiser criar uma string para armazenar 15 caracteres eu terei que dizer que essa string tem tamanho 17 já que a penúltima vai
+	ser ocupada por \n e a última por \0.
+
+	Funções para procurar um caractere em uma string
+	
+	strchr --> Retorna a primeira ocorrência
+	strrch --> Retorna a última ocorrência 
+	
+	char string;
+	char *letra;
+	letra = strchr(string,'caractere');
+	printf("\n\n%c",*letra);
+	printf("\n\n%c",*(letra+1));
+
+	ou
+
+	char string;
+	char *letra;
+	letra = strchr(string,'caractere');
+	printf("\n\n%c",*letra);
+	printf("\n\n%c",*(letra+1));
+
+	Função para encontrar uma substring
+	
+	char string1[50] = {"Bom dia simpatia"};
+	char string2[] = {"dia"};
+	char *ponteiro;
+
+	ponteiro = strstr(string1,string2);
+	
+	if(ponteiro){
+
+	    printf("\n%c\n",*ponteiro); //Imprimindo o conteúdo de ponteiro
+
+	}else{
+	   printf("\nPonteiro nulo.");
+	}
+
+	Função para converter uma string toda em maiúscula ou minúscula
+
+	strupr() --> Recebe como parâmetro a string que desejo converter em maiúscula
+	strlwr() --> Recebe como parâmetro a string que desejo converter em minúscula
+
+	//Funciona apenas no Windows
+	
+	Função para dividir uma string em partes
+
+	strtok(string," "); Separa a string em tokens toda vez que encontra string " "
+
+	char string[50] ={"Bom dia simpatia!"};
+	char *ponteiro;
+
+	ponteiro = strtok(string," ");
+
+	while(ponteiro){
+
+	    printf("%s\n", ponteiro);
+	    ponteiro = strtok(NULL," ");
+
+	}
+
+	Função para converter uma string toda para maiúscula ou para minúscula
+
+	strupr(string); --> Converte a string toda para maiúscula 
+	strlwr(string); --> Converte uma string toda para minúcula
+
+	Só funcionam apenas no Windows
+
+
+	*/
+
+	// Solicita que o usuário que entre com algum dado qualquer
+
+	/* Fim */ 
+
+	/* Cálculos matemáticos */
+
+	/* Saida de dados */
+	
+	// Exibe mensagem na tela
+
+	/* Fim */ 
+
+	//system("clear||cls"); //Limpar a tela Windows e no LINUX   
+	//system("PAUSE"); // Pausa o programa para que ele não feche inesperadamente assim como o comando "getchar();". Apenas no Windows. 
+	return 0; //
+
+	// Outra jeito de pausar o programa:
+
+	/*getchar();  "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
+		    do programa não fechar instantaneamente */
+	
+
+
+   } // Fim 
+
+Outra forma: 
+
+
+int main() // Função obrigatória
+
+   { /* Início */
+
+	// Atenção! O nome da variável, somente pode conter letras, números e o caracter _ (undescore)
+
+
+	/* Declaração de constantes ou variáveis */ //
+	
+	/* Fim */
+
+	/* Entrada de dados */
+	
+	setlocale(LC_ALL,"pt-BR");
+
+	// Solicita que o usuário que entre com algum dado qualquer
+
+	/* Fim */ 
+
+	/* Cálculos matemáticos */
+
+	/* Saida de dados */
+	
+	// Exibe mensagem na tela
+
+	/* Fim */ 
+
+	system("clear||cls"); //Limpar a tela Windows e no LINUX
+	getchar(); /* "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
+		    do programa não fechar instantaneamente */
+
+	/*
+	   Outro jeito de pausar o programa:
+	   
+	   system("PAUSE"); // Pausa o programa assim como o comando "getchar();"
+	   return 0; 
+        */
+
+
+   } // Fim 
+
+
+
+/*
+   Observação.:
+
+
+*/
