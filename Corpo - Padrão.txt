@@ -17,8 +17,8 @@
 
 */
 
-int main() // Função obrigatória
-   {
+int main(){ // Função obrigatória
+   
 	/* Declaração de constantes ou variáveis */
 	
 	/* Fim */
@@ -26,7 +26,6 @@ int main() // Função obrigatória
 	/* Entrada de dados */
 	
 	setlocale(LC_ALL,"pt-BR");
-	
 	/*
 	Leitura de uma string
 	1º forma:
@@ -54,9 +53,75 @@ int main() // Função obrigatória
 
 	Então se eu quiser criar uma string para armazenar 15 caracteres eu terei que dizer que essa string tem tamanho 17 já que a penúltima vai
 	ser ocupada por \n e a última por \0.
+
+	Funções para procurar um caractere em uma string
 	
+	strchr --> Retorna a primeira ocorrência
+	strrch --> Retorna a última ocorrência 
+	
+	char string;
+	char *letra;
+	letra = strchr(string,'caractere');
+	printf("\n\n%c",*letra);
+	printf("\n\n%c",*(letra+1));
+
+	ou
+
+	char string;
+	char *letra;
+	letra = strchr(string,'caractere');
+	printf("\n\n%c",*letra);
+	printf("\n\n%c",*(letra+1));
+
+	Função para encontrar uma substring
+	
+	char string1[50] = {"Bom dia simpatia"};
+	char string2[] = {"dia"};
+	char *ponteiro;
+
+	ponteiro = strstr(string1,string2);
+	
+	if(ponteiro){
+
+	    printf("\n%c\n",*ponteiro); //Imprimindo o conteúdo de ponteiro
+
+	}else{
+	   printf("\nPonteiro nulo.");
+	}
+
+	Função para converter uma string toda em maiúscula ou minúscula
+
+	strupr() --> Recebe como parâmetro a string que desejo converter em maiúscula
+	strlwr() --> Recebe como parâmetro a string que desejo converter em minúscula
+
+	//Funciona apenas no Windows
+	
+	Função para dividir uma string em partes
+
+	strtok(string," "); Separa a string em tokens toda vez que encontra string " "
+
+	char string[50] ={"Bom dia simpatia!"};
+	char *ponteiro;
+
+	ponteiro = strtok(string," ");
+
+	while(ponteiro){
+
+	    printf("%s\n", ponteiro);
+	    ponteiro = strtok(NULL," ");
+
+	}
+
+	Função para converter uma string toda para maiúscula ou para minúscula
+
+	strupr(string); --> Converte a string toda para maiúscula 
+	strlwr(string); --> Converte uma string toda para minúcula
+
+	Só funcionam apenas no Windows
+
+
 	*/
-	
+
 	// Solicita que o usuário que entre com algum dado qualquer
 
 	/* Fim */ 
@@ -85,9 +150,9 @@ int main() // Função obrigatória
 Outra forma: 
 
 
-int main() // Função obrigatória
+int main(){ // Função obrigatória
 
-   { /* Início */
+    /* Início */
 
 	// Atenção! O nome da variável, somente pode conter letras, números e o caracter _ (undescore)
 
@@ -112,18 +177,15 @@ int main() // Função obrigatória
 
 	/* Fim */ 
 
-	//system("clear||cls"); //Limpar a tela Windows e no LINUX
-	//system("PAUSE"); // Pausa o programa assim como o comando "getchar();"
-	return 0; 
-
+	system("clear||cls"); //Limpar a tela Windows e no LINUX
+	getchar(); /* "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
+		    do programa não fechar instantaneamente */
 
 	/*
-	
-	Outro jeito de pausar o programa: 
+	   Outro jeito de pausar o programa:
 	   
-	getchar(); "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
-		    do programa não fechar instantaneamente.
-	  
+	   system("PAUSE"); // Pausa o programa assim como o comando "getchar();"
+	   return 0; 
         */
 
 
