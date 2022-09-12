@@ -177,15 +177,16 @@ int main(){ // Função obrigatória
 
 	/* Fim */ 
 
-	system("clear||cls"); //Limpar a tela Windows e no LINUX
-	getchar(); /* "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
-		    do programa não fechar instantaneamente */
-
+	//system("clear||cls"); //Limpar a tela Windows e no LINUX
+	//system("PAUSE"); // Pausa o programa assim como o comando "getchar();"
+	return 0; 
+	
 	/*
 	   Outro jeito de pausar o programa:
 	   
-	   system("PAUSE"); // Pausa o programa assim como o comando "getchar();"
-	   return 0; 
+	  
+	   getchar(); /* "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
+		     o programa não fechar instantaneamente */
         */
 
 
