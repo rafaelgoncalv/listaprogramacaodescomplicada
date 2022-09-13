@@ -1,28 +1,30 @@
-#include <stdio.h> // Funções de entrada e saída
-#include <stdlib.h> // Função padrão
-#include <locale.h> // Habilita o uso de acentuação em palavras
-#include <string.h> //Funções para manipular strings
+#include <stdio.h> // FunÃ§Ãµes de entrada e saÃ­da
+#include <stdlib.h> // FunÃ§Ã£o padrÃ£o
+#include <locale.h> // Habilita o uso de acentuaÃ§Ã£o em palavras
+#include <string.h> //FunÃ§Ãµes para manipular strings
 
 // Adicionar novas bibliotecas acima de acordo com necessidade 
 
 /*
-    // Espaço destinado a transcrição do enunciado para não ficar olhando toda hora a lista
+    // EspaÃ§o destinado a transcriÃ§Ã£o do enunciado para nÃ£o ficar olhando toda hora a lista
 
 	Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado
 possui uma taxa diferente de imposto sobre o produto (MG 7%; SP 12%; RJ 15%; MS
-8%). Fac¸a um programa em que o usuario entre com o valor e o estado destino do ´
-produto e o programa retorne o prec¸o final do produto acrescido do imposto do estado
-em que ele sera vendido. Se o estado digitado não for válido, mostrar uma mensagem ´
+8%). FacÂ¸a um programa em que o usuario entre com o valor e o estado destino do Â´
+produto e o programa retorne o precÂ¸o final do produto acrescido do imposto do estado
+em que ele sera vendido. Se o estado digitado nÃ£o for vÃ¡lido, mostrar uma mensagem Â´
 de erro.
 
 */
 
-int main() // Função obrigatória
+int main() // FunÃ§Ã£o obrigatÃ³ria
    {
-	/* Declaração de constantes ou variáveis */
+	/* DeclaraÃ§Ã£o de constantes ou variÃ¡veis */
 	
 	float preco, precofinal;
-	char estado[3];
+	int TAM;
+	TAM = 3;
+	char estado[TAM];
 	
 	/* Fim */
 
@@ -34,13 +36,13 @@ int main() // Função obrigatória
 	printf("Digite o estado:");
 	printf("============================");
 	printf("\nMG - Minas gerais");
-	printf("\nSP - São paulo");
+	printf("\nSP - SÃ£o paulo");
 	printf("\nRJ - Rio de janeiro");
 	printf("\nMS - Mato grosso do sul");
 	printf("\n============================\n");
-	scanf("%s", &estado[0]);
+	scanf(" %3[^\n]", estado);//O espaÃ§o antes do % dentro do scanf consome todos os espaÃ§os em branco (' '), tabs ('\x9'), avanco de linha ('\n') e retorno de cursor ('\r') que estiverem em sequÃªncia.
 
-	// Solicita que o usuário que entre com algum dado qualquer
+	// Solicita que o usuÃ¡rio que entre com algum dado qualquer
 
 	/* Fim */ 
 
@@ -50,7 +52,7 @@ int main() // Função obrigatória
 		
 			precofinal = preco + 0.07 * preco;
 			
-			printf("\nO preço final é R$%.2f", precofinal);
+			printf("\nO preÃ§o final Ã© R$%.2f", precofinal);
 			
 	}else{
 		
@@ -58,14 +60,14 @@ int main() // Função obrigatória
 			
 			precofinal = preco + 0.12 * preco;
 			
-			printf("O preço final é R$%.2f", precofinal);
+			printf("O preÃ§o final Ã© R$%.2f", precofinal);
 			
 		}else{
 			if((estado[0] == 'r' && estado[1] == 'j') || (estado[0] == 'R' && estado[1] == 'J')){
 				
 				precofinal = preco + 0.15 * preco;
 			
-				printf("O preço final é R$%.2f", precofinal);
+				printf("O preÃ§o final Ã© R$%.2f", precofinal);
 				
 			}else{
 				
@@ -73,7 +75,7 @@ int main() // Função obrigatória
 
 					precofinal = preco + 0.08 * preco;
 					
-					printf("O preço final é R$%.2f", precofinal);
+					printf("O preÃ§o final Ã© R$%.2f", precofinal);
 					
 				}else{
 					
@@ -89,15 +91,16 @@ int main() // Função obrigatória
 
 	/* Fim */ 
 	
-	//system("PAUSE"); //Pausa o programa para que ele não feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
+	//system("PAUSE"); //Pausa o programa para que ele nÃ£o feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
 	return 0;
 
 	// Outra jeito de pausar o programa:
 
-	/*getchar();  "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
-		    do programa não fechar instantaneamente */
+	/*getchar();  "Pegar" caracter, mas neste caso irÃ¡ fazer apenas pausar o programa para na hora da exercuÃ§Ã£o
+		    do programa nÃ£o fechar instantaneamente */
 	
 
 
    } // Fim 
+
 
