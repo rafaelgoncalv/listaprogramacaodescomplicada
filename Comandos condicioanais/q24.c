@@ -1,25 +1,25 @@
-#include <stdio.h> // Fun√ß√µes de entrada e sa√≠da
-#include <stdlib.h> // Fun√ß√£o padr√£o
-#include <locale.h> // Habilita o uso de acentua√ß√£o em palavras
-#include <string.h> //Fun√ß√µes para manipular strings
+#include <stdio.h> // FunÁıes de entrada e saÌda
+#include <stdlib.h> // FunÁ„o padr„o
+#include <locale.h> // Habilita o uso de acentuaÁ„o em palavras
+#include <string.h> //FunÁıes para manipular strings
 
 // Adicionar novas bibliotecas acima de acordo com necessidade 
 
 /*
-    // Espa√ßo destinado a transcri√ß√£o do enunciado para n√£o ficar olhando toda hora a lista
+    // EspaÁo destinado a transcriÁ„o do enunciado para n„o ficar olhando toda hora a lista
 
 	Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado
 possui uma taxa diferente de imposto sobre o produto (MG 7%; SP 12%; RJ 15%; MS
-8%). Fac¬∏a um programa em que o usuario entre com o valor e o estado destino do ¬¥
-produto e o programa retorne o prec¬∏o final do produto acrescido do imposto do estado
-em que ele sera vendido. Se o estado digitado n√£o for v√°lido, mostrar uma mensagem ¬¥
+8%). Fac∏a um programa em que o usuario entre com o valor e o estado destino do ¥
+produto e o programa retorne o prec∏o final do produto acrescido do imposto do estado
+em que ele sera vendido. Se o estado digitado n„o for v·lido, mostrar uma mensagem ¥
 de erro.
 
 */
 
-int main() // Fun√ß√£o obrigat√≥ria
+int main() // FunÁ„o obrigatÛria
    {
-	/* Declara√ß√£o de constantes ou vari√°veis */
+	/* DeclaraÁ„o de constantes ou vari·veis */
 	
 	float preco, precofinal;
 	int TAM;
@@ -36,13 +36,13 @@ int main() // Fun√ß√£o obrigat√≥ria
 	printf("Digite o estado:");
 	printf("============================");
 	printf("\nMG - Minas gerais");
-	printf("\nSP - S√£o paulo");
+	printf("\nSP - S„o paulo");
 	printf("\nRJ - Rio de janeiro");
 	printf("\nMS - Mato grosso do sul");
 	printf("\n============================\n");
-	scanf(" %3[^\n]", estado);//O espa√ßo antes do % dentro do scanf consome todos os espa√ßos em branco (' '), tabs ('\x9'), avanco de linha ('\n') e retorno de cursor ('\r') que estiverem em sequ√™ncia.
+	scanf(" %3[^\n]", estado);//O espaÁo antes do % dentro do scanf consome todos os espaÁos em branco (' '), tabs ('\x9'), avanco de linha ('\n') e retorno de cursor ('\r') que estiverem em sequÍncia.
 
-	// Solicita que o usu√°rio que entre com algum dado qualquer
+	// Solicita que o usu·rio que entre com algum dado qualquer
 
 	/* Fim */ 
 
@@ -52,7 +52,7 @@ int main() // Fun√ß√£o obrigat√≥ria
 		
 			precofinal = preco + 0.07 * preco;
 			
-			printf("\nO pre√ßo final √© R$%.2f", precofinal);
+			printf("\nO preÁo final È R$%.2f", precofinal);
 			
 	}else{
 		
@@ -60,14 +60,14 @@ int main() // Fun√ß√£o obrigat√≥ria
 			
 			precofinal = preco + 0.12 * preco;
 			
-			printf("O pre√ßo final √© R$%.2f", precofinal);
+			printf("O preÁo final È R$%.2f", precofinal);
 			
 		}else{
 			if((estado[0] == 'r' && estado[1] == 'j') || (estado[0] == 'R' && estado[1] == 'J')){
 				
 				precofinal = preco + 0.15 * preco;
 			
-				printf("O pre√ßo final √© R$%.2f", precofinal);
+				printf("O preÁo final È R$%.2f", precofinal);
 				
 			}else{
 				
@@ -75,7 +75,7 @@ int main() // Fun√ß√£o obrigat√≥ria
 
 					precofinal = preco + 0.08 * preco;
 					
-					printf("O pre√ßo final √© R$%.2f", precofinal);
+					printf("O preÁo final È R$%.2f", precofinal);
 					
 				}else{
 					
@@ -91,16 +91,15 @@ int main() // Fun√ß√£o obrigat√≥ria
 
 	/* Fim */ 
 	
-	//system("PAUSE"); //Pausa o programa para que ele n√£o feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
+	//system("PAUSE"); //Pausa o programa para que ele n„o feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
 	return 0;
 
 	// Outra jeito de pausar o programa:
 
-	/*getchar();  "Pegar" caracter, mas neste caso ir√° fazer apenas pausar o programa para na hora da exercu√ß√£o
-		    do programa n√£o fechar instantaneamente */
+	/*getchar();  "Pegar" caracter, mas neste caso ir· fazer apenas pausar o programa para na hora da exercuÁ„o
+		    do programa n„o fechar instantaneamente */
 	
 
 
    } // Fim 
-
 

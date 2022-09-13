@@ -1,26 +1,26 @@
-#include <stdio.h> // FunÃ§Ãµes de entrada e saÃ­da
-#include <stdlib.h> // FunÃ§Ã£o padrÃ£o
-#include <locale.h> // Habilita o uso de acentuaÃ§Ã£o em palavras
+#include <stdio.h> // Funções de entrada e saída
+#include <stdlib.h> // Função padrão
+#include <locale.h> // Habilita o uso de acentuação em palavras
 
 // Adicionar novas bibliotecas acima de acordo com necessidade 
 
 /*
-    // EspaÃ§o destinado a transcriÃ§Ã£o do enunciado para nÃ£o ficar olhando toda hora a lista
+    // Espaço destinado a transcrição do enunciado para não ficar olhando toda hora a lista
 
-Escreva o menu de opcÃ§Ãµes abaixo. Leia a opÃ§Ã£o do usuÃ¡rio e execute a operaÃ§Ã£o esco-
-lhida. Escreva uma mensagem de erro se a opÃ§Ã£o for invÃ¡lida.
-Escolha a opÃ§Ã£o:
-1- Soma de 2 nÂ´umeros.
-2- DiferenÃ§a entre 2 nÃºmeros (maior pelo menor).
-3- Produto entre 2 nÃºmeros.
-4- DivisÃ£o entre 2 nÃºmeros (o denominador n~ao pode ser zero).
-OpÃ§Ã£o.
+Escreva o menu de opcções abaixo. Leia a opção do usuário e execute a operação esco-
+lhida. Escreva uma mensagem de erro se a opção for inválida.
+Escolha a opção:
+1- Soma de 2 n´umeros.
+2- Diferença entre 2 números (maior pelo menor).
+3- Produto entre 2 números.
+4- Divisão entre 2 números (o denominador n~ao pode ser zero).
+Opção.
 
 */
 
-int main(){ // FunÃ§Ã£o obrigatÃ³ria
+int main(){ // Função obrigatória
    
-	/* DeclaraÃ§Ã£o de constantes ou variÃ¡veis */
+	/* Declaração de constantes ou variáveis */
 	
 	int a , b, opcao;
 	
@@ -33,16 +33,16 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 	scanf("%d", &a);
 	printf("Digite o valor de b:");
 	scanf("%d", &b);
-	printf("Digite a operaÃ§Ã£o desejada:");
+	printf("Digite a operação desejada:");
 	printf("\n===========================");
 	printf("\n1 - Soma");
-	printf("\n2 - DiferenÃ§a");
+	printf("\n2 - Diferença");
 	printf("\n3 - Produto");
-	printf("\n4 - DivisÃ£o");
+	printf("\n4 - Divisão");
 	printf("\n===========================\n");
 	scanf("%d", &opcao);
 
-	// Solicita que o usuÃ¡rio que entre com algum dado qualquer
+	// Solicita que o usuário que entre com algum dado qualquer
 
 	/* Fim */ 
 
@@ -52,7 +52,7 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 		
 		case 1:
 			
-			printf("\n%d + %d = %d", a, b, a + b);
+			printf("\n%d + %d = %d", a, b, a+b);
 			
 		break;
 		
@@ -60,16 +60,16 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 			
 			if(a > b){
 				
-				printf("\n%d - %d = %d", a, b, a - b);
+				printf("\n%d - %d = %d", a, b, a-b);
 				
 			}else{
 				if(a < b){
 					
-					printf("%d - %d = %d", b, a, b - a);
+					printf("%d - %d = %d", b, a, b-a);
 					
 				}else{
 					
-					printf("%d - %d = %d", a, b, a - b);
+					printf("%d - %d = %d", a, b, a-b);
 					
 				}
 			}
@@ -78,7 +78,7 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 		
 		case 3:
 			
-			printf("%d * %d = %d", a, b, a * b);
+			printf("%d * %d = %d", a, b, a*b);
 			
 		break;
 		
@@ -90,14 +90,14 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 					
 			}else{
 				
-				printf("NÃ£o Ã© possÃ­vel efetuar essa divisÃ£o!!!");
+				printf("Não é possível efetuar essa divisão!!!");
 				
 			}
 		break;
 		
 		default: 
 		
-			printf("O nÃºmero da opÃ§Ã£o digitado Ã© invÃ¡lido!!!");
+			printf("O número da opção digitado é inválido!!!");
 			
 		break;
 
@@ -107,13 +107,13 @@ int main(){ // FunÃ§Ã£o obrigatÃ³ria
 
 	/* Fim */ 
    
-	//system("PAUSE"); //Pausa o programa para que ele nÃ£o feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
+	//system("PAUSE"); //Pausa o programa para que ele não feche inesperadamente assim como o comando "getchar();". Apenas no Windows 
 	return 0;
 
 	// Outra jeito de pausar o programa:
 
-	/*getchar();  "Pegar" caracter, mas neste caso irÃ¡ fazer apenas pausar o programa para na hora da exercuÃ§Ã£o
-		    do programa nÃ£o fechar instantaneamente */
+	/*getchar();  "Pegar" caracter, mas neste caso irá fazer apenas pausar o programa para na hora da exercução
+		    do programa não fechar instantaneamente */
 	
 
 
