@@ -53,7 +53,7 @@ int main(){ // Função obrigatória
 		
 	}else{
 		
-		printf("\nA idade que trabalhador começou a trabalhar é menor do que a permitida por lei");
+		printf("\nA idade mínima para trabalhar por lei e 18 anos");
 		
 	}
 	
